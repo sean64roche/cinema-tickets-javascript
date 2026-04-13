@@ -4,7 +4,6 @@
 
 export default class TicketTypeRequest {
   #type;
-
   #noOfTickets;
 
   constructor(type, noOfTickets) {
@@ -18,6 +17,7 @@ export default class TicketTypeRequest {
 
     this.#type = type;
     this.#noOfTickets = noOfTickets;
+    Object.freeze(this);
   }
 
   getNoOfTickets() {
